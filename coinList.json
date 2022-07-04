@@ -1,0 +1,63 @@
+//BitCoin
+{
+    "name": "Bitcoin",
+    "website": "https://bitcoin.org",
+    "description": "Bitcoin is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.",
+    "explorer": "https://blockchain.info",
+    "research": "https://research.binance.com/en/projects/bitcoin",
+    "symbol": "BTC",
+    "type": "coin",
+    "decimals": 8,
+    "status": "active",
+    "links": [
+        {
+            "name": "github",
+            "url": "https://github.com/bitcoin"
+        },
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/Bitcoin"
+        },
+        {
+            "name": "reddit",
+            "url": "https://reddit.com/r/Bitcoin"
+        },
+        {
+            "name": "whitepaper",
+            "url": "https://bitcoin.org/bitcoin.pdf"
+        }
+    ]
+}
+//Cosmos
+{
+    "name": "Cosmos",
+    "website": "https://cosmos.network/",
+    "description": "Cosmos is a secure & scalable blockchain ecosystem where thousands of dApps interoperate to create the foundation for a new token economy.",
+    "explorer": "https://www.mintscan.io/",
+    "research": "https://research.binance.com/en/projects/cosmos-network",
+    "symbol": "ATOM",
+    "type": "coin",
+    "decimals": 6,
+    "status": "active",
+    "tags": [
+        "staking-native"
+    ],
+    "links": [
+        {
+            "name": "github",
+            "url": "https://github.com/cosmos"
+        },
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/cosmos"
+        },
+        {
+            "name": "reddit",
+            "url": "https://reddit.com/r/cosmosnetwork"
+        },
+        {
+            "name": "whitepaper",
+            "url": "https://cosmos.network/resources/whitepaper"
+        }
+    ]
+}
