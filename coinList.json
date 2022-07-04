@@ -1,4 +1,4 @@
-/* BitCoin */
+
 {
     "name": "Bitcoin",
     "website": "https://bitcoin.org",
@@ -28,7 +28,7 @@
         }
     ]
 }
-/* Cosmos */
+
 {
     "name": "Cosmos",
     "website": "https://cosmos.network/",
