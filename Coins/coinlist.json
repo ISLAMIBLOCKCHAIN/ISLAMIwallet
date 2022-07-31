@@ -8,7 +8,7 @@
         "website": "https://islamicoin.finance",
         "explorer": "https://polygonscan.com/token/0x9c891326fd8b1a713974f73bb604677e1e63396d",
         "status": "active",
-        "logo":"https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/assets/0x9c891326Fd8b1a713974f73bb604677E1E63396D/logo.png",
+        "logo":"https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/ISLAMI.png",
         "id": "0x9c891326Fd8b1a713974f73bb604677E1E63396D",
         "links": [
             {
@@ -58,7 +58,7 @@
         "description": "Polygon (Matic) strives to solve the scalability and usability issues, while not compromising on decentralization and leveraging the existing developer community and ecosystem",
         "explorer": "https://polygonscan.com/",
         "research": "https://docs.matic.network/",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/info/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Polygon.png",
         "type": "coin",
         "symbol": "MATIC",
         "decimals": 18,
@@ -89,7 +89,7 @@
         "website": "https://centre.io/usdc",
         "description": "USDC is a fully collateralized US dollar stablecoin, an Ethereum powered coin and is the brainchild of CENTRE, an open source project bootstrapped by contributions from Circle and Coinbase.",
         "explorer": "https://polygonscan.com/token/0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/assets/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/USDC%20PoS.png",
         "type": "POLYGON",
         "symbol": "USDC",
         "decimals": 6,
@@ -125,7 +125,7 @@
         "website": "https://tether.to",
         "description": "Tether (USDT) is a cryptocurrency with a value meant to mirror the value of the U.S. dollar.",
         "explorer": "https://polygonscan.com/token/0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/assets/0xc2132D05D31c914a87C6611C10748AEb04B58e8F/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/USDT%20PoS.png",
         "type": "POLYGON",
         "symbol": "USDT",
         "decimals": 6,
@@ -156,7 +156,7 @@
         "website": "https://polygon.technology",
         "description": "Wrapped MATIC",
         "explorer": "https://polygonscan.com/token/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Wmatic.png",
         "status": "active",
         "id": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
         "links": [
@@ -182,7 +182,7 @@
         "description": "Bitcoin is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.",
         "explorer": "https://blockchain.info",
         "research": "https://research.binance.com/en/projects/bitcoin",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoin/info/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/BTC.png",
         "symbol": "BTC",
         "type": "coin",
         "decimals": 8,
@@ -214,7 +214,7 @@
         "description": "Solana is the worlds most performant blockchain in the world at 710k transactions per second. 710k TPS is achieved by encoding the passage of time as data.",
         "explorer": "https://explorer.solana.com/",
         "research": "https://research.binance.com/en/projects/solana",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/solana/info/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Solana.png",
         "symbol": "SOL",
         "type": "coin",
         "decimals": 9,
@@ -246,7 +246,7 @@
         "description": "Cosmos is a secure & scalable blockchain ecosystem where thousands of dApps interoperate to create the foundation for a new token economy.",
         "explorer": "https://www.mintscan.io/",
         "research": "https://research.binance.com/en/projects/cosmos-network",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/cosmos/info/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Cosmos.png",
         "symbol": "ATOM",
         "type": "coin",
         "decimals": 6,
@@ -281,7 +281,7 @@
         "description": "Open source platform to write and distribute decentralized applications.",
         "explorer": "https://etherscan.io/",
         "research": "https://research.binance.com/en/projects/ethereum",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/ETH.png",
         "symbol": "ETH",
         "type": "coin",
         "decimals": 18,
@@ -308,44 +308,12 @@
     
     
     {
-        "name": "Polkadot",
-        "website": "https://polkadot.network",
-        "description": "Polkadot is a blockchain project that aims to connect blockchains, to enable the transfer of value and logic across chains. DOT is the native coin of the network.",
-        "explorer": "http://polkascan.io",
-        "research": "https://research.binance.com/en/projects/polkadot",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polkadot/info/logo.png",
-        "symbol": "DOT",
-        "type": "coin",
-        "decimals": 10,
-        "status": "active",
-        "links": [
-            {
-                "name": "github",
-                "url": "https://github.com/w3f"
-            },
-            {
-                "name": "twitter",
-                "url": "https://twitter.com/polkadotnetwork"
-            },
-            {
-                "name": "reddit",
-                "url": "https://reddit.com/r/dot"
-            },
-            {
-                "name": "whitepaper",
-                "url": "https://polkadot.network/PolkaDotPaper.pdf"
-            }
-        ]
-    },
-    
-    
-    {
         "name": "Avalanche X-Chain",
         "website": "http://avax.network",
         "description": "Avalanche is an open-source platform for launching highly decentralized applications, new financial primitives, and new interoperable blockchains. This is the X-Chain, the default asset blockchain on Avalanche and enables the creation of new assets, exchanging between assets, and cross-subnet transfers.",
         "explorer": "https://explorer.avax.network",
         "research": "https://research.binance.com/en/projects/avalanche",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/avalanchex/info/logo.png",
+        "logo": "hhttps://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/AVX.png",
         "symbol": "AVAX",
         "type": "coin",
         "decimals": 9,
@@ -372,7 +340,7 @@
         "description": "Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide. Introduced as a joke currency on 6 December 2013, Dogecoin quickly developed its own online community.",
         "explorer": "https://blockchair.com/dogecoin",
         "research": "https://research.binance.com/en/projects/dogecoin",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/doge/info/logo.png",
+        "logo": "https://github.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/blob/main/Coins/Logo/Doge.png",
         "symbol": "DOGE",
         "type": "coin",
         "decimals": 8,
@@ -402,7 +370,7 @@
         "description": "TRON is dedicated to building the infrastructure for a truly decentralized Internet.",
         "explorer": "https://tronscan.io/#/",
         "research": "https://research.binance.com/en/projects/tron",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tron/info/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/TRX.png",
         "symbol": "TRX",
         "type": "coin",
         "decimals": 6,
@@ -435,12 +403,50 @@
         "description": "PAX Gold (PAXG) is a digital asset where one token is backed by one fine troy ounce (t oz) of a 400 oz London Good Delivery gold bar, stored in Brink’s gold vaults.",
         "explorer": "https://etherscan.io/token/0x45804880De22913dAFE09f4980848ECE6EcbAf78",
         "research": "https://research.binance.com/en/projects/pax-gold",
-        "logo": "https://raw.githubusercontent.com/trustwallet/assets/ad3cfa2e1c8e4b295cd81d64ecc5ab2a9514f79e/blockchains/ethereum/assets/0x45804880De22913dAFE09f4980848ECE6EcbAf78/logo.png",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/PAXg.png",
         "type": "ERC20",
         "symbol": "PAXG",
         "decimals": 18,
         "status": "active",
         "id": "0x45804880De22913dAFE09f4980848ECE6EcbAf78"
-    }
+    },
+    
+    {
+    "name": "Coinerr",
+    "website": "https://coinerr.io",
+    "description": "Coinerr make your payments easierr, make your world betterr, make your shopping saferr.",
+    "explorer": "https://polygonscan.com/token/0xfb32513135e3267995268e3099d2b6114d20b6ed",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/ERR.png",    
+    "type": "POLYGON",
+    "symbol": "ERR",
+    "decimals": 9,
+    "status": "active",
+    "id": "0xFB32513135e3267995268E3099d2B6114d20B6eD",
+    "links": [
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/coinerr_err"
+        },
+        {
+            "name": "telegram",
+            "url": "https://t.me/coinerr_ERR"
+        },
+        {
+            "name": "whitepaper",
+            "url": "https://coinerr.io/papers/whitepaper.pdf"
+        },
+        {
+            "name": "medium",
+            "url": "https://coinerr.medium.com/"
+        },
+        {
+            "name": "coinmarketcap",
+            "url": "https://coinmarketcap.com/currencies/coinerr/"
+        }
+    ],
+    "tags": [
+        "defi"
+    ]
+} 
     ]
     
