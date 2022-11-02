@@ -1,6 +1,6 @@
 [
   {
-    "name": "ISLAMICOIN",
+    "subscription": "true",
     "symbol": "ISLAMI",
     "type": "POLYGON",
     "decimals": 7,
