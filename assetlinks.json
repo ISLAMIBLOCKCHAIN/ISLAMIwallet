@@ -1,1 +1,14 @@
-
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.islami.wallet",
+            "sha256_cert_fingerprints": [
+                "9D:65:86:B1:43:77:D6:D8:81:CB:30:00:3C:9C:E3:30:0E:6E:96:BF:BD:42:08:06:AD:67:DB:52:E1:D5:2D:C0"
+            ]
+        }
+    }
+]
