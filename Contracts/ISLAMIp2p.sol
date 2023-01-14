@@ -196,14 +196,6 @@ contract ISLAMIp2p is Swap {
         require(msg.sender == feeReceiver, "Not authorized to change Max");
         maxISLAMI = _newMax * ISLAMIdcml;
     }
-    /*function getSell(uint256 _amountISLAMI) public view returns(uint256 _price){
-        _price = getPriceSell(USDCpool, address(this), _amountISLAMI, 1);
-        return(_price);
-    }
-    function getBuy(uint256 _amountUSDC) public view returns(uint256 _price){
-        _price = getPriceBuy(USDCpool, address(this), _amountUSDC, 1);
-        return(_price);
-    }*/
     function ISLAMIprice() public view returns(uint256 _price){
         _price = getPriceSell(USDCpool, address(this), 10000000, 1);
         return(_price);
@@ -313,6 +305,19 @@ contract ISLAMIp2p is Swap {
     function getOrders() public view returns (orderDetails[] memory){
         return OrderDetails;
     }
+    function getOrderIndex(address _orderOwner) public view returns(uint256 Index){
+        uint256 _index = OrderDetails.length -1;
+        if(OrderDetails[_index].sB == _orderOwner){
+            return(_index);
+        }
+        else{
+            for(uint i = 0; i< OrderDetails.length -1; i++){
+            if(OrderDetails[i].sB == _orderOwner){
+                return(i);
+            }
+        }
+        }
+    }
     function forOrders(uint256 _orderIndex, address _orderOwner) internal{
         fixOrders(_orderIndex);
         deleteOrder(_orderOwner);
@@ -421,12 +426,12 @@ contract ISLAMIp2p is Swap {
         uint256 amountUSD = _amount;//.mul(USDdcml);
         uint256 amountISLAMI = _amount;//.mul(ISLAMIdcml);
         uint256 toReceive = amountUSD.mul(ISLAMIdcml).div(priceUSD);
-        uint256 _p2pFee;
+        uint256 _p2pFee = amountISLAMI.mul(p2pFee).div(feeFactor);
+        uint256 _index = getOrderIndex(seller);
         require(p2p[_orderOwner].orderStatus != true, "Order was completed");
         if(p2p[_orderOwner].orderType == 1){//Take sell
         require(amountISLAMI <= p2p[_orderOwner].remainAmount, "Seller has less ISLAMI than order");
         require(_currency.balanceOf(msg.sender) >= amountUSD, "Not enought USD");
-        _p2pFee = amountISLAMI.mul(p2pFee).div(feeFactor);
         ISLAMI.transfer(burn, _p2pFee);
         ISLAMIinOrder -= amountISLAMI;
         burned += _p2pFee;
@@ -436,6 +441,7 @@ contract ISLAMIp2p is Swap {
         userOrders[msg.sender].bought += amountISLAMI;
         userOrders[seller].sold += amountISLAMI;
         p2p[_orderOwner].remainAmount -= amountISLAMI;
+        OrderDetails[_index].remainAmount -= amountISLAMI;
           if(p2p[_orderOwner].remainAmount == 0){
                 p2p[_orderOwner].orderStatus = true;
                 orderFill(seller); 
@@ -454,6 +460,7 @@ contract ISLAMIp2p is Swap {
         userOrders[msg.sender].sold += toReceive;
         userOrders[seller].bought += toReceive;
         p2p[_orderOwner].remainCurrency -= amountUSD;
+        OrderDetails[_index].remainCurrency -= amountUSD;
           if(p2p[_orderOwner].remainCurrency == 0){
                 p2p[_orderOwner].orderStatus = true;
                 orderFill(seller);
