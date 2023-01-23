@@ -333,6 +333,7 @@
     "type": "POLYGON",
     "symbol": "UMMA",
     "decimals": 18,
+    "price": 0.001,
     "status": "active",
     "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133"
  }
