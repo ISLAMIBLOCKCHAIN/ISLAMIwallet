@@ -1,0 +1,20 @@
+[ 
+    {
+    "name": "UMMA",
+    "website": "https://ummalife.com/",
+    "description": "One Ummah — One Network.",
+    "explorer": "https://polygonscan.com/token/0x36596A1dC57c695Bed1A063470a7802797Dca133",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/UMMA.png",    
+    "type": "POLYGON",
+    "symbol": "UMMA",
+    "decimals": 18,
+    "status": "active",
+    "price": 0.0013,
+    "priceChangePercentage24h":0.22,
+    "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133"
+ }
+
+    
+
+    
+    ]
