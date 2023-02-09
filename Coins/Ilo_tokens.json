@@ -1,5 +1,19 @@
 [ 
     {
+    "name": "UMMA",
+    "website": "https://ummalife.com/",
+    "description": "One Ummah — One Network.",
+    "explorer": "https://polygonscan.com/token/0x36596A1dC57c695Bed1A063470a7802797Dca133",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/UMMA.png",    
+    "type": "POLYGON",
+    "symbol": "UMMA",
+    "decimals": 18,
+    "status": "active",
+    "price": 0.001,
+    "priceChangePercentage24h":3.22,
+    "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133"
+ },
+    {
     "name": "Coinerr",
     "website": "https://coinerr.io",
     "description": "Coinerr make your payments easierr, make your world betterr, make your shopping saferr.",
@@ -37,22 +51,9 @@
     "tags": [
         "defi"
     ]
- },
-    
-    {
-    "name": "UMMA",
-    "website": "https://ummalife.com/",
-    "description": "One Ummah — One Network.",
-    "explorer": "https://polygonscan.com/token/0x36596A1dC57c695Bed1A063470a7802797Dca133",
-    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/UMMA.png",    
-    "type": "POLYGON",
-    "symbol": "UMMA",
-    "decimals": 18,
-    "status": "active",
-    "price": 0.001,
-    "priceChangePercentage24h":3.22,
-    "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133"
  }
+    
+
     
     ]
     
