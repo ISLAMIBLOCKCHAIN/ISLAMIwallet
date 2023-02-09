@@ -9,6 +9,8 @@
     "symbol": "ERR",
     "decimals": 9,
     "status": "active",
+    "price": 0.11,
+    "priceChangePercentage24h":1.22,
     "id": "0xFB32513135e3267995268E3099d2B6114d20B6eD",
     "links": [
         {
@@ -47,6 +49,7 @@
     "symbol": "UMMA",
     "decimals": 18,
     "price": 0.001,
+    "priceChangePercentage24h":3.22,
     "status": "active",
     "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133"
  }
