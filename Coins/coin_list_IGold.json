@@ -323,6 +323,44 @@
         "defi"
     ]
  },
+ {
+    "name": "ISLAMI GOLD",
+    "website": "Comming Soon.",
+    "description": "Comming Soon.",
+    "explorer": "https://polygonscan.com/token/0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE",
+    "logo": "https://github.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/blob/main/Coins/Logo/TRX.png",    
+    "type": "POLYGON",
+    "symbol": "IGOLD",
+    "decimals": 8,
+    "price": 30,
+    "status": "active",
+    "id": "0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE"
+    "links": [
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/coinerr_err"
+        },
+        {
+            "name": "telegram",
+            "url": "https://t.me/coinerr_ERR"
+        },
+        {
+            "name": "whitepaper",
+            "url": "https://coinerr.io/papers/whitepaper.pdf"
+        },
+        {
+            "name": "medium",
+            "url": "https://coinerr.medium.com/"
+        },
+        {
+            "name": "coinmarketcap",
+            "url": "https://coinmarketcap.com/currencies/coinerr/"
+        }
+    ],
+    "tags": [
+        "defi"
+    ]
+ },
     
     {
     "name": "UMMA",
@@ -336,20 +374,8 @@
     "price": 0.013,
     "status": "active",
     "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133"
- },
-{
-    "name": "ISLAMI GOLD",
-    "website": "Comming Soon.",
-    "description": "Comming Soon.",
-    "explorer": "https://polygonscan.com/token/0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE",
-    "logo": "https://github.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/blob/main/Coins/Logo/TRX.png",    
-    "type": "POLYGON",
-    "symbol": "IGOLD",
-    "decimals": 8,
-    "price": 30,
-    "status": "active",
-    "id": "0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE"
  }
+
     
     ]
     
