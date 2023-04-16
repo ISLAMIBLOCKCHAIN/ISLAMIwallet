@@ -332,6 +332,7 @@
     "type": "POLYGON",
     "symbol": "ERR",
     "decimals": 9,
+    "price": 30,
     "status": "active",
     "id": "0xFB32513135e3267995268E3099d2B6114d20B6eD",
     "links": [
