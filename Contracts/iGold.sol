@@ -34,6 +34,8 @@ interface IiGoldNFT {
     function burn(address, uint256) external;
 
     function ownerOf(uint256) external returns (address);
+
+    function totalSupply() external view returns (uint256);
 }
 
 contract iGold is ERC20, Ownable {
@@ -45,25 +47,28 @@ contract iGold is ERC20, Ownable {
     address public constant deadWallet =
         0x000000000000000000000000000000000000dEaD;
 
+    address public goldBuyer;    
+
+    IERC20 public iGoldToken;
     IERC20 public islamiToken;
     IERC20 public usdtToken;
     AggregatorV3Interface internal goldPriceFeed;
 
-    mapping(address => bool) public vipMembers;
+    mapping(address => bool) public admins;
 
-    modifier onlyVIP() {
-        require(vipMembers[msg.sender], "Caller is not a VIP member");
+    modifier onlyAdmin() {
+        require(admins[msg.sender], "Caller is not admin");
         _;
     }
 
     modifier notPausedTrade() {
-        require(!isPaused, "Contract is paused");
+        require(!isPaused, "Trading is paused");
         _;
     }
 
     event iGoldNFTMinted(address indexed user, uint256 nftId);
     event iGoldNFTReturned(address indexed user, uint256 indexed nftId);
-    event goldReserved(string Type, uint256 goldInGrams);
+    event goldReserved(string Type, uint256 goldAddedInGrams, uint256 totalGoldInGrams);
     event trade(
         string Type,
         uint256 iGold,
@@ -82,10 +87,12 @@ contract iGold is ERC20, Ownable {
         uint256 amount
     );
 
+    uint256 public constant iGoldTokensPerOunce = 31103476800;
     uint256 public goldReserve; // in grams
     uint256 public usdtVault;
     uint256 public feesBurned;
-    uint256 public physicalGoldFee;
+    uint256 public physicalGoldFee = 50 * 1e6;
+    uint256 public physicalGoldFeeSwiss = 200 * 1e6;
 
     bool isPaused;
 
@@ -102,10 +109,11 @@ contract iGold is ERC20, Ownable {
     ) ERC20("iGold", "iGold") {
         islamiToken = IERC20(_islamiToken);
         usdtToken = IERC20(_usdtToken);
+        iGoldToken = IERC20(address(this));
         pmmContract = IPMMContract(_pmmContract); // 0x14afbB9E6Ab4Ab761f067fA131e46760125301Fc
         goldPriceFeed = AggregatorV3Interface(_goldPriceFeed); //(0x0C466540B2ee1a31b441671eac0ca886e051E410);
         iGoldNFT = IiGoldNFT(_iGoldNFT); //0x6E644B9d53812fdb92bB026Ec9a42B67D2908f26
-        vipMembers[msg.sender] = true;
+        admins[msg.sender];
     }
 
     function addUSDT(uint256 _amount) external{
@@ -118,27 +126,20 @@ contract iGold is ERC20, Ownable {
         iGoldNFT = IiGoldNFT(_iGoldNFT);
     }
 
-    function addVIPMember(address _member) external onlyOwner {
-        require(_member != address(0), "Zero address not allowed");
-        require(!vipMembers[_member], "Address is already a VIP member");
-
-        vipMembers[_member] = true;
-    }
-
-    function removeVIPMember(address _member) external onlyOwner {
-        require(_member != address(0), "Zero address not allowed");
-        require(vipMembers[_member], "Address is not a VIP member");
-
-        vipMembers[_member] = false;
-    }
-
-    function pause(bool _status) public onlyOwner returns (bool) {
+    function pause(bool _status) external onlyOwner returns (bool) {
+        int256 _goldPrice = getLatestGoldPriceOunce();
+        if(_status){
+            require(_goldPrice == 0, "gold price is not zero");
+        } else{
+            require(_goldPrice > 0, "gold price is zero");
+        }
         isPaused = _status;
         return (_status);
     }
 
-    function setPhysicalGoldFee(uint256 newFee) external onlyOwner {
-        physicalGoldFee = newFee;
+    function setPhysicalGoldFee(uint256 newFeeLocal, uint256 newFeeSwiss) external onlyOwner {
+        physicalGoldFee = newFeeLocal * 1e6;
+        physicalGoldFeeSwiss = newFeeSwiss * 1e6;
     }
 
     function setUSDTAddress(address _USDT) external onlyOwner {
@@ -182,47 +183,52 @@ contract iGold is ERC20, Ownable {
     }
 
     function getLatestGoldPriceGram() public view returns (int256) {
-        (, int256 pricePerOunce, , , ) = goldPriceFeed.latestRoundData();
+        //(, int256 pricePerOunce, , , ) = goldPriceFeed.latestRoundData();
 
-        int256 pricePerGram = pricePerOunce * 1e8 / 3110347680; // Multiplied by 10^8 to handle decimals
+        int256 pricePerGram = getLatestGoldPriceOunce() * 1e8 / 3110347680; // Multiplied by 10^8 to handle decimals
 
         return pricePerGram;
     }
 
-    function addGoldReserve(uint256 amountGold) external onlyOwner {
+    function getIGoldPrice() public view returns (int256) {
+        int256 iGoldPrice = (getLatestGoldPriceGram()) / 10;
+        return iGoldPrice;
+    }
+
+    function addGoldReserve(uint256 amountGold) external onlyAdmin {
         goldReserve += amountGold;
-        emit goldReserved("Add", amountGold);
+        emit goldReserved("Add", amountGold, goldReserve);
     }
 
     function removeGoldReserve(uint256 amountGold) external onlyOwner {
         goldReserve -= amountGold;
-        emit goldReserved("Remove", amountGold);
+        emit goldReserved("Remove", amountGold, goldReserve);
     }
 
-    function buy(uint256 usdtAmount) public notPausedTrade {
-        uint256 _totalSupply = totalSupply();
+    function buy(uint256 _usdtAmount) internal notPausedTrade returns (uint256){
+        //uint256 _totalSupply = totalSupply();
         require(
-            _totalSupply <= goldReserve.mul(1e8).div(10),
+            totalSupply() <= goldReserve.mul(1e8).div(10),
             "gold reserve reached"
         );
         int256 goldPrice = getLatestGoldPriceGram();
         require(goldPrice > 0, "Invalid gold price");
 
-        uint256 goldAmount = usdtAmount.mul(1e2).mul(1e1).mul(1e8).div(
+        uint256 _iGoldAmount = _usdtAmount.mul(1e2).mul(1e1).mul(1e8).div(
             uint256(goldPrice)
         ); // 0.1g per token
-        uint256 islamiFee = getIslamiPrice(usdtAmount.div(100)); // 1% fee
+        uint256 islamiFee = getIslamiPrice(_usdtAmount.div(100)); // 1% fee
 
         emit trade(
             "Buy",
-            goldAmount.div(1e8),
+            _iGoldAmount.div(1e8),
             goldPrice / (1e8),
-            usdtAmount / (1e6),
+            _usdtAmount / (1e6),
             islamiFee / (1e7)
         );
 
         require(
-            usdtToken.transferFrom(msg.sender, address(this), usdtAmount),
+            usdtToken.transferFrom(msg.sender, address(this), _usdtAmount),
             "Check USDT allowance or user balance"
         );
         require(
@@ -230,29 +236,30 @@ contract iGold is ERC20, Ownable {
             "Check ISLAMI allowance or user balance"
         );
 
-        usdtVault = usdtVault.add(usdtAmount);
+        usdtVault = usdtVault.add(_usdtAmount);
 
         feesBurned = feesBurned.add(islamiFee);
 
-        _mint(msg.sender, goldAmount);
+        _mint(msg.sender, _iGoldAmount);
+        return _iGoldAmount;
     }
 
-    function sell(uint256 goldAmount) public notPausedTrade {
+    function sell(uint256 _iGoldAmount) public notPausedTrade {
         int256 goldPrice = getLatestGoldPriceGram();
         require(goldPrice > 0, "Invalid gold price");
 
-        uint256 usdtAmount = goldAmount
+        uint256 _usdtAmount = _iGoldAmount
             .mul(uint256(goldPrice))
             .div(1e4)
             .div(1e1)
             .div(1e6); // 0.1g per token
-        uint256 islamiFee = getIslamiPrice(usdtAmount.div(100)); // 1% fee
+        uint256 islamiFee = getIslamiPrice(_usdtAmount.div(100)); // 1% fee
 
-        emit trade("Sell", goldAmount, goldPrice, usdtAmount, islamiFee);
+        emit trade("Sell", _iGoldAmount, goldPrice, _usdtAmount, islamiFee);
 
-        _burn(msg.sender, goldAmount);
+        _burn(msg.sender, _iGoldAmount);
         require(
-            usdtToken.transfer(msg.sender, usdtAmount),
+            usdtToken.transfer(msg.sender, _usdtAmount),
             "USDT amount in contract does not cover your sell!"
         );
         require(
@@ -260,32 +267,25 @@ contract iGold is ERC20, Ownable {
             "Check ISLAMI allowance or user balance"
         );
 
-        usdtVault = usdtVault.sub(usdtAmount);
+        usdtVault = usdtVault.sub(_usdtAmount);
 
         feesBurned = feesBurned.add(islamiFee);
     }
 
-    function specialBuy(uint256 usdtAmount, uint256 goldReserveAmount)
-        external
-        onlyVIP
-        notPausedTrade
-    {
-        goldReserve = goldReserve.add(goldReserveAmount);
-        buy(usdtAmount);
-        emit goldReserved("Add", goldReserveAmount);
-    }
+    
 
     function receivePhysicalGold(
-        uint256 goldAmount,
+        uint256 ounceId,
+        uint256 ounceType,
         string calldata deliveryDetails
-    ) external onlyVIP notPausedTrade {
-        int256 goldPrice = getLatestGoldPriceGram();
-        require(goldPrice > 0, "Invalid gold price");
+    ) external notPausedTrade {
+        uint256 feeInUSDT;
+        if(ounceType == 0){
+            feeInUSDT = physicalGoldFee;
+        } else{
+            feeInUSDT = physicalGoldFeeSwiss;
+        }
 
-        uint256 feeInUSDT = physicalGoldFee;
-
-        require(goldReserve >= goldAmount, "Not enough gold in reserve");
-        require(usdtVault >= feeInUSDT, "Not enough USDT in vault");
         require(
             usdtToken.balanceOf(msg.sender) >= feeInUSDT,
             "Insufficient USDT balance"
@@ -295,13 +295,13 @@ contract iGold is ERC20, Ownable {
             "Insufficient USDT allowance"
         );
 
-        _burn(msg.sender, goldAmount);
-        goldReserve = goldReserve.sub(goldAmount);
+        iGoldNFT.burn(msg.sender, ounceId);
+        goldReserve = goldReserve.sub(iGoldTokensPerOunce);
 
         usdtToken.transferFrom(msg.sender, address(this), feeInUSDT);
         usdtVault = usdtVault.add(feeInUSDT);
 
-        emit PhysicalGoldRequest(msg.sender, goldAmount, deliveryDetails);
+        emit PhysicalGoldRequest(msg.sender, iGoldTokensPerOunce, deliveryDetails);
     }
 
     function checkReserves()
@@ -311,8 +311,8 @@ contract iGold is ERC20, Ownable {
     {
         int256 goldPrice = getLatestGoldPriceGram();
         require(goldPrice > 0, "Invalid gold price");
-
-        uint256 totalMintedGold = totalSupply(); // Total minted iGold tokens (each token represents 0.1g of gold)
+        uint256 iGoldInNFT = iGoldTokensPerOunce * (iGoldNFT.totalSupply());
+        uint256 totalMintedGold = totalSupply() + iGoldInNFT; // Total minted iGold tokens (each token represents 0.1g of gold)
         goldValue = totalMintedGold
             .mul(uint256(goldPrice))
             .div(1e4)
@@ -323,36 +323,29 @@ contract iGold is ERC20, Ownable {
         return (goldValue, usdtInVault);
     }
 
-    function mintiGoldNFT() external {
+    function mintIGoldNFT() external {
         uint256 iGoldBalance = balanceOf(msg.sender);
-        uint256 iGoldOunce = iGoldTokensPerOunce();
 
         require(
-            iGoldBalance >= iGoldOunce,
+            iGoldBalance >= iGoldTokensPerOunce,
             "iGold balance not sufficient for an iGoldNFT"
         );
-        _burn(msg.sender, iGoldOunce);
+        _burn(msg.sender, iGoldTokensPerOunce);
         uint256 nftId = iGoldNFT.mint(msg.sender);
 
         emit iGoldNFTMinted(msg.sender, nftId);
     }
 
-    function returniGoldNFT(uint256 nftId) external {
+    function returnIGoldNFT(uint256 nftId) external {
         require(
             iGoldNFT.ownerOf(nftId) == msg.sender,
             "Caller is not the owner of this NFT"
         );
 
-        uint256 iGoldOunce = iGoldTokensPerOunce();
-
         iGoldNFT.burn(msg.sender, nftId);
-        _mint(msg.sender, iGoldOunce);
+        _mint(msg.sender, iGoldTokensPerOunce);
 
         emit iGoldNFTReturned(msg.sender, nftId);
-    }
-
-    function iGoldTokensPerOunce() public pure returns (uint256) {
-        return 31103476800;
     }
 
     function withdrawTokens(address tokenAddress, uint256 amount)
