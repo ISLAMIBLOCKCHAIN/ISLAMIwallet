@@ -21,7 +21,7 @@
     "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iGold%20Coin.png",    
     "type": "POLYGON",
     "symbol": "iGold",
-    "decimals": 18,
+    "decimals": 8,
     "status": "active",
     "price": 0.013,
     "priceChangePercentage24h":0.22,
