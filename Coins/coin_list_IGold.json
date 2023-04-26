@@ -324,13 +324,13 @@
     ]
  },
  {
-    "name": "ISLAMI GOLD",
+    "name": "iGold",
     "website": "Comming Soon.",
     "description": "Comming Soon.",
     "explorer": "https://polygonscan.com/token/0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE",
     "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iGold%20Coin.png",    
     "type": "POLYGON",
-    "symbol": "IGOLD",
+    "symbol": "iGold",
     "decimals": 8,
     "status": "active",
     "id": "0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE",
