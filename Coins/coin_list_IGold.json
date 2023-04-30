@@ -53,13 +53,13 @@
     "name": "iGold",
     "website": "Comming Soon.",
     "description": "Comming Soon.",
-    "explorer": "https://polygonscan.com/token/0x54DC4fE9533aE3945178128DA3EF8CF6aA9d0af8",
+    "explorer": "https://polygonscan.com/token/0x9440146ea1dF0142eE1892602416DA896c7876E8",
     "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iGold%20Coin.png",    
     "type": "POLYGON",
     "symbol": "iGold",
     "decimals": 8,
     "status": "active",
-    "id": "0x54DC4fE9533aE3945178128DA3EF8CF6aA9d0af8",
+    "id": "0x9440146ea1dF0142eE1892602416DA896c7876E8",
     "links": [
      
     ],
