@@ -1,19 +1,30 @@
-
-[ 
-
-    {
+[
+  {
     "name": "IBFN",
     "website": "",
     "description": "",
     "explorer": "https://polygonscan.com/token/0xc2e9312573DecA65346716dc0B54E13620500c43",
-    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/IBFN.png",    
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/IBFN.png",
     "type": "POLYGON",
     "symbol": "IBFN",
     "decimals": 6,
     "status": "active",
     "price": 0.0069,
-    "priceChangePercentage24h":0.0,
+    "priceChangePercentage24h": 0.0,
     "id": "0xc2e9312573DecA65346716dc0B54E13620500c43"
- }
-    
-    ]
+  },
+  {
+    "name": "iGold",
+    "website": "https://ummalife.com/",
+    "description": "One iGold — One Network.",
+    "explorer": "https://polygonscan.com/token/0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iGold%20Coin.png",
+    "type": "POLYGON",
+    "symbol": "iGold",
+    "decimals": 8,
+    "status": "active",
+    "price": 0.013,
+    "priceChangePercentage24h": 0.22,
+    "id": "0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE"
+  }
+]
