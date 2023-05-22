@@ -391,5 +391,42 @@
     "tags": [
       ""
     ]
-  }
+  },
+   {
+    "name": "ChainLink",
+    "website": "https://coinerr.io",
+    "description": "Coinerr make your payments easierr, make your world betterr, make your shopping saferr.",
+    "explorer": "https://polygonscan.com/token/0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/chainlink.png",    
+    "type": "POLYGON",
+    "symbol": "LINK",
+    "decimals": 18,
+    "status": "active",
+    "id": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+    "links": [
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/coinerr_err"
+        },
+        {
+            "name": "telegram",
+            "url": "https://t.me/coinerr_ERR"
+        },
+        {
+            "name": "whitepaper",
+            "url": "https://coinerr.io/papers/whitepaper.pdf"
+        },
+        {
+            "name": "medium",
+            "url": "https://coinerr.medium.com/"
+        },
+        {
+            "name": "coinmarketcap",
+            "url": "https://coinmarketcap.com/currencies/coinerr/"
+        }
+    ],
+    "tags": [
+        "defi"
+    ]
+ }
 ]
