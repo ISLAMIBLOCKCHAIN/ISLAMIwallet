@@ -1,0 +1,19 @@
+{
+  "name": "iGold 1oz NFT",
+  "description": "An NFT representing 1 ounce of gold (24 carat).",
+  "image": "https://example.com/path/to/image.jpg",
+  "attributes": [
+    {
+      "trait_type": "Material",
+      "value": "Gold"
+    },
+    {
+      "trait_type": "Weight",
+      "value": "1 ounce"
+    },
+    {
+      "trait_type": "Purity",
+      "value": "24 carat"
+    }
+  ]
+}
