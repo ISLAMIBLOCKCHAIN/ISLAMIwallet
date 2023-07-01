@@ -1,6 +1,6 @@
 [
   {
-    "block_fee": false,
-    "github_fee": 100000
+    "gas_price": 100000,
+    "github_fee": 21000
   }
 ]
