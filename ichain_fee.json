@@ -1,6 +1,6 @@
 
   {
     "gas_price": 100000,
-    "github_fee": 21000
+    "gas_limit": 21000
   }
 
