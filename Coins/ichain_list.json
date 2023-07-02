@@ -61,54 +61,71 @@
         "logo":"https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/ISLAMI.png",
         "id": "0x9c891326Fd8b1a713974f73bb604677E1E63396D",
         "links": [
-            {
-                "name": "twitter",
-                "url": "https://twitter.com/islamicoin"
-            },
-            {
-                "name": "github",
-                "url": "https://github.com/islamiblockchain"
-            },
-            {
-                "name": "telegram",
-                "url": "https://t.me/islamicoin1"
-            },
-            {
-                "name": "telegram_news",
-                "url": "https://t.me/islamicoinchat"
-            },
-            {
-                "name": "facebook",
-                "url": "https://facebook.com/islamicoin"
-            },
-            {
-                "name": "source_code",
-                "url": "https://github.com/ISLAMIBLOCKCHAIN/ISLAMICOIN/blob/main/contracts/ISLAMICOIN.sol"
-            },
-            {
-                "name": "whitepaper",
-                "url": "https://secureservercdn.net/160.153.137.40/mmc.19a.myftpupload.com/wp-content/uploads/2021/09/islamicoinE.pdf"
-            },
-            {
-                "name": "youtube",
-                "url": "https://youtube.com/channel/UCPdg9Cx2g9DyTR_xD5S_lXA"
-            },
-            {
-                "name": "medium",
-                "url": "https://medium.com/@islamicoin"
-            }
+      {
+        "name": "twitter",
+        "url": "https://twitter.com/islamicoin"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/islamiblockchain"
+      },
+      {
+        "name": "telegram",
+        "url": "https://t.me/islamicoin1"
+      },
+      {
+        "name": "telegram_news",
+        "url": "https://t.me/islamicoinchat"
+      },
+      {
+        "name": "facebook",
+        "url": "https://facebook.com/islamicoin"
+      },
+      {
+        "name": "source_code",
+        "url": "https://github.com/ISLAMIBLOCKCHAIN/ISLAMICOIN/blob/main/contracts/ISLAMICOIN.sol"
+      },
+      {
+        "name": "whitepaper",
+        "url": "https://secureservercdn.net/160.153.137.40/mmc.19a.myftpupload.com/wp-content/uploads/2021/09/islamicoinE.pdf"
+      },
+      {
+        "name": "youtube",
+        "url": "https://youtube.com/channel/UCPdg9Cx2g9DyTR_xD5S_lXA"
+      },
+      {
+        "name": "medium",
+        "url": "https://medium.com/@islamicoin"
+      }
         ]
     },
+    {
+    "name": "iGold",
+    "website": "Comming Soon.",
+    "description": "Comming Soon.",
+    "explorer": "https://polygonscan.com/token/0x9440146ea1dF0142eE1892602416DA896c7876E8",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iGold%20Coin.png",    
+    "type": "POLYGON",
+    "symbol": "iGold",
+    "decimals": 8,
+    "status": "active",
+    "id": "0x9440146ea1dF0142eE1892602416DA896c7876E8",
+    "links": [
+     
+    ],
+    "tags": [
+      "defi"
+    ]
+  },
     
     {
         "name": "Polygon",
         "website": "https://polygon.technology/",
         "short_description": "Polygon (Matic) strives to solve the scalability and usability issues, while not compromising on decentralization and leveraging the existing developer community and ecosystem",
         "description": "Polygon (Matic) strives to solve the scalability and usability issues, while not compromising on decentralization and leveraging the existing developer community and ecosystem",
-        "explorer": "https://polygonscan.com/token/0x0000000000000000000000000000000000001010",
-        "id": "0x0000000000000000000000000000000000001010",
+        "explorer": "https://polygonscan.com/",
         "research": "https://docs.matic.network/",
-        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Polygon.png",       
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Polygon.png",
         "type": "coin",
         "symbol": "MATIC",
         "decimals": 18,
@@ -374,19 +391,93 @@
         "defi"
     ]
  },
-    
-    {
+
+  {
     "name": "UMMA",
     "website": "https://ummalife.com/",
     "description": "One Ummah — One Network.",
     "explorer": "https://polygonscan.com/token/0x36596A1dC57c695Bed1A063470a7802797Dca133",
-    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/UMMA.png",    
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/UMMA.png",
     "type": "POLYGON",
     "symbol": "UMMA",
     "decimals": 18,
     "price": 0.013,
     "status": "active",
     "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133"
+  },
+      {
+    "name": "IBFN",
+    "website": "",
+    "description": "",
+    "explorer": "https://polygonscan.com/token/0xc2e9312573DecA65346716dc0B54E13620500c43",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/IBFN.png",
+    "type": "POLYGON",
+    "symbol": "IBFN",
+    "decimals": 6,
+    "status": "active",
+    "id": "0xc2e9312573DecA65346716dc0B54E13620500c43",
+    "links": [
+      {
+        "name": "",
+        "url": ""
+      },
+      {
+        "name": "",
+        "url": ""
+      },
+      {
+        "name": "",
+        "url": ""
+      },
+      {
+        "name": "",
+        "url": ""
+      },
+      {
+        "name": "",
+        "url": ""
+      }
+    ],
+    "tags": [
+      ""
+    ]
+  },
+   {
+    "name": "ChainLink",
+    "website": "https://coinerr.io",
+    "description": "Coinerr make your payments easierr, make your world betterr, make your shopping saferr.",
+    "explorer": "https://polygonscan.com/token/0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/chainlink.png",    
+    "type": "POLYGON",
+    "symbol": "LINK",
+    "decimals": 18,
+    "status": "active",
+    "id": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+    "links": [
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/coinerr_err"
+        },
+        {
+            "name": "telegram",
+            "url": "https://t.me/coinerr_ERR"
+        },
+        {
+            "name": "whitepaper",
+            "url": "https://coinerr.io/papers/whitepaper.pdf"
+        },
+        {
+            "name": "medium",
+            "url": "https://coinerr.medium.com/"
+        },
+        {
+            "name": "coinmarketcap",
+            "url": "https://coinmarketcap.com/currencies/coinerr/"
+        }
+    ],
+    "tags": [
+        "defi"
+    ]
  }
     
     ]
