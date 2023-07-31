@@ -478,7 +478,34 @@
     "tags": [
         "defi"
     ]
- }
+ },
+    {
+        "name": "Tron",
+        "website": "https://tron.network/",
+        "short_description": "",
+        "description": "",
+        "explorer": "https://tronscan.org/",
+        "research": "https://docs.tronscan.org/",
+        "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/TRX.png",
+        "type": "coin",
+        "symbol": "TRX",
+        "decimals": 6,
+        "status": "active",
+        "links": [
+            {
+                "name": "github",
+                "url": "https://github.com/tronprotocol"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/trondao"
+            },
+            {
+                "name": "reddit",
+                "url": "https://www.reddit.com/r/Tronix/"
+            }
+        ]
+    }
     
     ]
     
