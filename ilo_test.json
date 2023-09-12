@@ -9,22 +9,22 @@
     "symbol": "IBFN",
     "decimals": 6,
     "status": "active",
-    "price": 0.0029,
+    "price": 0.0016,
     "priceChangePercentage24h": 0.0,
     "id": "0xc2e9312573DecA65346716dc0B54E13620500c43"
   },
   {
-    "name": "iGold",
-    "website": "https://ummalife.com/",
-    "description": "One iGold — One Network.",
-    "explorer": "https://polygonscan.com/token/0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE",
-    "logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iGold%20Coin.png",
+    "name": "Brana",
+    "website": "https://branaverse.com/",
+    "description": "Branaverse is a web3 decentralized freelancer marketplace",
+    "explorer": "https://polygonscan.com/token/0x8c6220E2d66f0ecEAdAff785946D3d50A539f40E",
+    "logo": "https://github.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/blob/main/Coins/Logo/BRANA.png?raw=true",
     "type": "POLYGON",
-    "symbol": "iGold",
-    "decimals": 8,
+    "symbol": "Brana",
+    "decimals": 18,
     "status": "active",
-    "price": 0.013,
-    "priceChangePercentage24h": 0.22,
-    "id": "0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE"
+    "price": 0.006,
+    "priceChangePercentage24h": 0.0,
+    "id": "0x8c6220E2d66f0ecEAdAff785946D3d50A539f40E"
   }
 ]
