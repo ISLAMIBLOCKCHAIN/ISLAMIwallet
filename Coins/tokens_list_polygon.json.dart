@@ -3,7 +3,7 @@
         {
             "symbol": "ISLAMI",
             "name": "ISLAMICOIN",
-            "decimals": 18,
+            "decimals": 7,
             "address": "0x9c891326Fd8b1a713974f73bb604677E1E63396D",
             "logoURI": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/ISLAMI.png",
             "tags": [
