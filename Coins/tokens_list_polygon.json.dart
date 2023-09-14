@@ -41,6 +41,46 @@
                 "tokens"
             ]
         },
+           {
+            "symbol": "USDC",
+            "name": "USD Coin (PoS)",
+            "decimals": 6,
+            "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "logoURI": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/USDC%20PoS.png",
+            "tags": [
+                "tokens"
+            ]
+        },
+                {
+            "symbol": "ERR",
+            "name": "Coinerr",
+            "decimals": 9,
+            "address": "0xFB32513135e3267995268E3099d2B6114d20B6eD",
+            "logoURI": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/ERR.png",
+            "tags": [
+                "tokens"
+            ]
+        },
+                {
+            "symbol": "UMMA",
+            "name": "UMMA",
+            "decimals": 18,
+            "address": "0x36596A1dC57c695Bed1A063470a7802797Dca133",
+            "logoURI": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/UMMA.png",
+            "tags": [
+                "tokens"
+            ]
+        },
+                {
+            "symbol": "LINK",
+            "name": "ChainLink",
+            "decimals": 18,
+            "address": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+            "logoURI": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/chainlink.png",
+            "tags": [
+                "tokens"
+            ]
+        },
         {
             "symbol": "MUST",
             "name": "Must",
