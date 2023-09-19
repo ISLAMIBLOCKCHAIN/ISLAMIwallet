@@ -31,16 +31,6 @@
                 "PEG:USD"
             ]
         },
-        {
-            "symbol": "AAVE",
-            "name": "Aave",
-            "decimals": 18,
-            "address": "0xd6df932a45c0f255f85145f286ea0b292b21c90b",
-            "logoURI": "https://tokens.1inch.io/0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9.png",
-            "tags": [
-                "tokens"
-            ]
-        },
            {
             "symbol": "USDC",
             "name": "USD Coin (PoS)",
@@ -77,16 +67,6 @@
             "decimals": 18,
             "address": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
             "logoURI": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/chainlink.png",
-            "tags": [
-                "tokens"
-            ]
-        },
-        {
-            "symbol": "MUST",
-            "name": "Must",
-            "decimals": 18,
-            "address": "0x9c78ee466d6cb57a4d01fd887d2b5dfb2d46288f",
-            "logoURI": "https://tokens.1inch.io/0x9c78ee466d6cb57a4d01fd887d2b5dfb2d46288f.png",
             "tags": [
                 "tokens"
             ]
