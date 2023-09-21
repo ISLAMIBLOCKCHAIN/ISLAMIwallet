@@ -11,7 +11,8 @@
     "status": "active",
     "price": 0.0016,
     "priceChangePercentage24h": 0.0,
-    "id": "0xc2e9312573DecA65346716dc0B54E13620500c43"
+    "id": "0xc2e9312573DecA65346716dc0B54E13620500c43",
+    "disable_price": true
   },
       {
     "name": "iGold",
@@ -39,6 +40,8 @@
     "status": "active",
     "price": 0.006,
     "priceChangePercentage24h": 0.0,
-    "id": "0x8c6220E2d66f0ecEAdAff785946D3d50A539f40E"
+    "id": "0x8c6220E2d66f0ecEAdAff785946D3d50A539f40E",
+    "disable_price": true
+    
   }
 ]
