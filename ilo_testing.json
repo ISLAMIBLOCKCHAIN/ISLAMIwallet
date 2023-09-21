@@ -56,7 +56,7 @@
     "price": 1.0,
     "status": "active",
     "id": "0x36596A1dC57c695Bed1A063470a7802797Dca133",
-    "disable_price": false
+    "disable_price": true
 
   }
 ]
