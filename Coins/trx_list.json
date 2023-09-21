@@ -531,6 +531,19 @@
         "url": "https://coinmarketcap.com/ru/currencies/tether/"
       }
     ]
+  },
+ {
+    "name": "Brana",
+    "website": "https://branaverse.com/",
+    "description": "Branaverse is a web3 decentralized freelancer marketplace",
+    "explorer": "https://polygonscan.com/token/0x8c6220E2d66f0ecEAdAff785946D3d50A539f40E",
+    "logo": "https://github.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/blob/main/Coins/Logo/BRANA.png?raw=true",
+    "type": "POLYGON",
+    "symbol": "Brana",
+    "decimals": 18,
+    "status": "active",
+    "priceChangePercentage24h": 0.0,
+    "id": "0x8c6220E2d66f0ecEAdAff785946D3d50A539f40E"
   }
   
     
