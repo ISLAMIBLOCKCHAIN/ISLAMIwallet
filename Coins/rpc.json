@@ -1,3 +1,4 @@
 {
-   "ichain":"http://95.217.1.43:8545/"
+   "ichain":"http://95.217.1.43:8545/",
+   "explorer":"https://testnet.ichainscan.com/"
 }
