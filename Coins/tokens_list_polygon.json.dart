@@ -14,7 +14,7 @@
             "symbol": "MATIC",
             "name": "MATIC",
             "decimals": 18,
-            "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "address": "0x0000000000000000000000000000000000001010",
             "logoURI": "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
             "tags": [
                 "native"
