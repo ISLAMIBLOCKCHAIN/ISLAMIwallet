@@ -108,6 +108,7 @@
       "explorer":"https://polygonscan.com/token/0x9440146ea1dF0142eE1892602416DA896c7876E8",
       "logo":"https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iGold%20Coin.png",
       "type":"POLYGON",
+      "id_num":19220,
       "symbol":"iGold",
       "decimals":8,
       "status":"active",
