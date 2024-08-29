@@ -29,6 +29,23 @@
     "id": "0xf728d8c5C8a65F40ef61b00BC714DcAc6Af767DE"
  },
   {
+"name": "iSilver",
+"website": "Comming Soon.",
+"description": "Comming Soon.",
+"explorer": "https://polygonscan.com/token/0xa21e2A4E617d5c2814BDEFcF49F322A5dD219DF5",
+"logo": "https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/iSilver.png",
+"type": "POLYGON",
+"id_num": 19220,
+"symbol": "iSilver",
+"decimals": 8,
+"status": "active",
+"id": "0xa21e2A4E617d5c2814BDEFcF49F322A5dD219DF5",
+"links": [],
+"tags": [
+"defi"
+]
+},
+  {
     "name": "Brana",
     "website": "https://branaverse.com/",
     "description": "Branaverse is a web3 decentralized freelancer marketplace",
