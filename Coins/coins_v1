@@ -378,58 +378,6 @@
       "id":"0x45804880De22913dAFE09f4980848ECE6EcbAf78"
    },
    {
-      "name":"UMMA",
-      "website":"https://ummalife.com/",
-      "description":"One Ummah — One Network.",
-      "explorer":"https://polygonscan.com/token/0x36596A1dC57c695Bed1A063470a7802797Dca133",
-      "logo":"https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/UMMA.png",
-      "type":"POLYGON",
-      "id_num":25323,
-      "symbol":"UMMA",
-      "decimals":18,
-      "price":0.013,
-      "status":"active",
-      "id":"0x36596A1dC57c695Bed1A063470a7802797Dca133"
-   },
-   {
-      "name":"IBFN",
-      "website":"",
-      "description":"",
-      "explorer":"https://polygonscan.com/token/0xc2e9312573DecA65346716dc0B54E13620500c43",
-      "logo":"https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/IBFN.png",
-      "type":"POLYGON",
-      "id_num":28578,
-      "symbol":"IBFN",
-      "decimals":6,
-      "status":"active",
-      "id":"0xc2e9312573DecA65346716dc0B54E13620500c43",
-      "links":[
-         {
-            "name":"",
-            "url":""
-         },
-         {
-            "name":"",
-            "url":""
-         },
-         {
-            "name":"",
-            "url":""
-         },
-         {
-            "name":"",
-            "url":""
-         },
-         {
-            "name":"",
-            "url":""
-         }
-      ],
-      "tags":[
-         ""
-      ]
-   },
-   {
       "name":"ChainLink",
       "website":"https://coinerr.io",
       "description":"Coinerr make your payments easierr, make your world betterr, make your shopping saferr.",
