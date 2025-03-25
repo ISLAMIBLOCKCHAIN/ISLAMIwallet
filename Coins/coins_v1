@@ -149,7 +149,7 @@
       "logo":"https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Polygon.png",
       "type":"coin",
       "id_num":3890,
-      "symbol":"MATIC",
+      "symbol":"POL",
       "decimals":18,
       "status":"active",
       "links":[
