@@ -148,8 +148,8 @@
       "research":"https://docs.matic.network/",
       "logo":"https://raw.githubusercontent.com/ISLAMIBLOCKCHAIN/ISLAMIwallet/main/Coins/Logo/Polygon.png",
       "type":"coin",
-      "id_num":3890,
-      "symbol":"POL",
+      "id_num":28321,
+      "symbol":"MATIC",
       "decimals":18,
       "status":"active",
       "links":[
